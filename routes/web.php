@@ -21,3 +21,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('products','ProductController@index')->name('product.index');
+Route::get('create','ProductController@create')->name('create.product');
+
+Route::post('store','ProductController@store')->name('product.store');
+
+Route::get('edit/product/{id}','ProductController@edit');
+Route::get('delete/product/{id}','ProductController@delete');
+
+Route::post('update/product/{id}','ProductController@update');
